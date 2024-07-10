@@ -32,29 +32,6 @@ npm install sxored-satellite
 yarn add sxored-satellite
 ```
 
-## Usage
-
-```ts
-import SxoredSatellite from "sxored-satellite";
-
-const client = new SxoredSatellite("X_API_TOKEN")
-const agent = await client.agent.create({
-    name: "My Agent",
-    description: "My Awesome Agent",
-    isActive: True,
-    llmModel: "GPT_4_1106_PREVIEW",
-    promprt: "You are a helpful assistant"
-});
-
-output = await client.agent.invoke(agent.data.id, {
-    input: "Hi there!",
-    enableStreaming: false,
-    sessionId: "123",
-});
-
-console.log("Received response from superagent", agent.data)
-```
-
 ## Example usage in React component
 ```typescript
 import React, { useState } from 'react';
