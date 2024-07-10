@@ -1,11 +1,11 @@
-import { ApiResponse, ApiError, ImageToTextResponse } from '../types';
+import { ApiResponse, ApiError, FileToTextResponse } from '../types';
 import { request } from './request';
 
-export async function readPdf(baseURL: string, accessToken: string, file: File): Promise<ApiResponse<ImageToTextResponse>> {
+export async function readPdf(baseURL: string, accessToken: string, file: File): Promise<ApiResponse<FileToTextResponse>> {
   const formData = new FormData();
   formData.append('file', file);
 
-  return request<ImageToTextResponse>(baseURL, accessToken, '/upload-pdf-text', {
+  return request<FileToTextResponse>(baseURL, accessToken, '/read-pdf', {
     method: 'POST',
     body: formData,
   });

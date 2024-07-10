@@ -1,7 +1,8 @@
 import { readIdCard } from './api/readIdCard';
 import { readPdf } from './api/readPdf';
 import { readPdfFraud } from './api/readPdfFraud';
-import { ApiResponse, ImageToTextResponse, PdfSummaryResponse } from './types';
+import { readMetadata } from './api/readMetadata';
+import { ApiResponse, ImageToTextResponse, FileToTextResponse, PdfSummaryResponse } from './types';
 import { environment } from './environment';
 
 class SxoredSatellite {
@@ -17,12 +18,16 @@ class SxoredSatellite {
     return readIdCard(this.baseURL, this.accessToken, file);
   }
 
-  async readPdf(file: File): Promise<ApiResponse<ImageToTextResponse>> {
+  async readPdf(file: File): Promise<ApiResponse<FileToTextResponse>> {
     return readPdf(this.baseURL, this.accessToken, file);
   }
 
-  async readPdfFraud(file: File): Promise<ApiResponse<PdfSummaryResponse>> {
+  async readPdfFraud(file: File): Promise<ApiResponse<FileToTextResponse>> {
     return readPdfFraud(this.baseURL, this.accessToken, file);
+  }
+
+  async readMetadata(file: File): Promise<ApiResponse<FileToTextResponse>> {
+    return readMetadata(this.baseURL, this.accessToken, file);
   }
 }
 

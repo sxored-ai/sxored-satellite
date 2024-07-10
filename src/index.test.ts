@@ -49,19 +49,4 @@ describe('SxoredSatellite', () => {
     expect(response.data.text).toBe('PDF Text');
     expect(response.status).toBe(200);
   });
-
-  it('should handle uploadPdfForSummary successfully', async () => {
-    fetchMock.mockResolvedValueOnce({
-      ok: true,
-      status: 200,
-      statusText: 'OK',
-      json: async () => ({ summary: 'PDF Summary', keyPoints: ['Point 1', 'Point 2'] }),
-    });
-
-    const file = new File(['dummy content'], 'document.pdf', { type: 'application/pdf' });
-    const response = await apiSdk.readPdfFraud(file);
-    expect(response.data.summary).toBe('PDF Summary');
-    expect(response.data.keyPoints).toEqual(['Point 1', 'Point 2']);
-    expect(response.status).toBe(200);
-  });
 });

@@ -83,6 +83,38 @@ export default FileUploader;
 
 ```
 
+## Functions
+
+### 1. Read ID Card photo (OCR replacement)
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readIdCard(selected_file)
+```
+
+### 2. Read PDF files
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readPdf(selected_file)
+```
+
+### 3. Read PDF Metadata
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readMetadata(selected_file)
+```
+
+### 4. Check for potential fraud
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readPdfFraud(selected_file)
+```
+
+<br/>
+
 ## Acknowledgements
 
 To be able to use this SDK, each client must be registered in the client database in SxoredOS. The IP address to access the endpoint must also be whitelisted first.

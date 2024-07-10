@@ -15,7 +15,7 @@ function readPdf(baseURL, accessToken, file) {
     return __awaiter(this, void 0, void 0, function* () {
         const formData = new FormData();
         formData.append('file', file);
-        return (0, request_1.request)(baseURL, accessToken, '/upload-pdf-text', {
+        return (0, request_1.request)(baseURL, accessToken, '/read-pdf', {
             method: 'POST',
             body: formData,
         });

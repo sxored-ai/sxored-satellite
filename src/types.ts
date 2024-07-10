@@ -15,6 +15,11 @@ export interface ImageToTextResponse {
   confidence: number;
 }
 
+export interface FileToTextResponse {
+  text: string;
+  confidence: number;
+}
+
 export interface PdfSummaryResponse {
   summary: string;
   keyPoints: string[];

@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const readIdCard_1 = require("./api/readIdCard");
 const readPdf_1 = require("./api/readPdf");
 const readPdfFraud_1 = require("./api/readPdfFraud");
+const readMetadata_1 = require("./api/readMetadata");
 const environment_1 = require("./environment");
 class SxoredSatellite {
     constructor(accessToken, baseURL = environment_1.environment.apiBaseUrl) {
@@ -31,6 +32,11 @@ class SxoredSatellite {
     readPdfFraud(file) {
         return __awaiter(this, void 0, void 0, function* () {
             return (0, readPdfFraud_1.readPdfFraud)(this.baseURL, this.accessToken, file);
+        });
+    }
+    readMetadata(file) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return (0, readMetadata_1.readMetadata)(this.baseURL, this.accessToken, file);
         });
     }
 }
