@@ -119,10 +119,11 @@ client.readPdfFraud(selected_file)
 
 To be able to use this SDK, each client must be registered in the client database in SxoredOS. The IP address to access the endpoint must also be whitelisted first.
 
+Contact our [Customer Success](mailto:use@sxored.com) if your business interested to implement our SxoredOS.
+
 ## Beta status
 
-This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning the package version to a specific version. This way, you can install the 
-same version each time without breaking changes unless you are intentionally looking for the latest version.
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning the package version to a specific version. This way, you can install the same version each time without breaking changes unless you are intentionally looking for the latest version.
 
 ## Contributing
 
