@@ -1,0 +1,27 @@
+{
+  "name": "sxored-satellite",
+  "version": "v0.0.1",
+  "private": false,
+  "repository": "https://github.com/sxored-ai/sxored-satellite",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "Sxored Labs",
+  "license": "MIT",
+  "description": "SDK to access Sxored Operating Service.",
+  "dependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.0"
+  }
+}
