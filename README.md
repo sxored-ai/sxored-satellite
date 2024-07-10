@@ -7,6 +7,7 @@
 <p>
 
 [![npm shield](https://img.shields.io/npm/v/sxored-satellite)](https://www.npmjs.com/package/sxored-satellite)
+<img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/sxored-ai/sxored-satellite" /> 
 <img alt="" src="https://img.shields.io/github/repo-size/sxored-ai/sxored-satellite" /> <img alt="GitHub Issues" src="https://img.shields.io/github/issues/sxored-ai/sxored-satellite" /> <img alt="Github License" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
 </p>
 
