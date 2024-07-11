@@ -87,10 +87,15 @@ export default FileUploader;
 
 ### 1. Read ID Card photo (OCR replacement)
 
+#### Request
+
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
 client.readIdCard(selected_file)
 ```
+
+#### Response 200
+
 ```json
 {
   "name": "ELON MUSK",
@@ -113,10 +118,15 @@ client.readIdCard(selected_file)
 
 ### 2. Read PDF files
 
+#### Request
+
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
 client.readPdf(selected_file)
 ```
+
+#### Response 200
+
 ```json
 [
   {
@@ -152,10 +162,15 @@ client.readPdf(selected_file)
 
 ### 3. Read PDF Metadata
 
+#### Request
+
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
 client.readMetadata(selected_file)
 ```
+
+#### Response 200
+
 ```json
 {
   "/Title": "CONSOLIDATE: 0098034777 | WAWAN SETYAWAN",
@@ -168,10 +183,15 @@ client.readMetadata(selected_file)
 
 ### 4. Check for potential fraud
 
+#### Request
+
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
 client.readPdfFraud(selected_file)
 ```
+
+#### Response 200
+
 ```json
 {
   "fraud": true,
