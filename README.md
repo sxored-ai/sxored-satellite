@@ -4,9 +4,6 @@
 
 ### Framework for building Loan Origination Assistants
 
-![illustration](https://github.com/sxored-ai/sxored-satellite/blob/main/image.png?raw=true)
-
-
 <p>
 
 [![npm shield](https://img.shields.io/npm/v/sxored-satellite)](https://www.npmjs.com/package/sxored-satellite)
@@ -34,6 +31,42 @@ npm install sxored-satellite
 # or
 
 yarn add sxored-satellite
+```
+
+```bash
+wbs@xyz:~$ yarn add sxored-satellite
+yarn add v1.22.22
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+
+success Saved lockfile.
+success Saved 21 new dependencies.
+info Direct dependencies
+└─ sxored-satellite@0.0.5
+info All dependencies
+├─ @cspotcode/source-map-support@0.8.1
+├─ @jridgewell/resolve-uri@3.1.2
+├─ @jridgewell/sourcemap-codec@1.5.0
+├─ @jridgewell/trace-mapping@0.3.9
+├─ @tsconfig/node16@1.0.4
+├─ @types/node@20.14.10
+├─ acorn-walk@8.3.3
+├─ acorn@8.12.1
+├─ arg@4.1.3
+├─ create-require@1.1.1
+├─ diff@4.0.2
+├─ make-error@1.3.6
+├─ sxored-satellite@0.0.5
+├─ ts-node@10.9.2
+├─ typescript@5.5.3
+├─ undici-types@5.26.5
+├─ v8-compile-cache-lib@3.0.1
+└─ yn@3.1.1
+Done in 8.02s.
+
 ```
 
 ## Example usage in React component
