@@ -4,6 +4,9 @@
 
 ### Framework for building Loan Origination Assistants
 
+![illustration](https://github.com/sxored-ai/sxored-satellite/blob/main/image.png?raw=true)
+
+
 <p>
 
 [![npm shield](https://img.shields.io/npm/v/sxored-satellite)](https://www.npmjs.com/package/sxored-satellite)
@@ -38,7 +41,7 @@ yarn add sxored-satellite
 import React, { useState } from 'react';
 import SxoredSatellite from 'sxored-satellite';
 
-const apiSdk = new SxoredSatellite('X_API_TOKEN');
+const client = new SxoredSatellite('X_API_TOKEN');
 
 const FileUploader: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -57,7 +60,7 @@ const FileUploader: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await apiSdk.readIdCard(file);
+        const res = await client.readIdCard(file);
         setResponse(JSON.stringify(res.data, null, 2));
       } catch (err: any) {
         setError(err.message);
