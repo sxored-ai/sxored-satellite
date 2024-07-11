@@ -34,7 +34,7 @@ yarn add sxored-satellite
 ```
 
 ```bash
-wbs@xyz:~$ yarn add sxored-satellite
+wbs@xyz:~$ yarn add sxored-satellite@0.0.8
 yarn add v1.22.22
 info No lockfile found.
 [1/4] Resolving packages...
@@ -45,7 +45,7 @@ info No lockfile found.
 success Saved lockfile.
 success Saved 21 new dependencies.
 info Direct dependencies
-└─ sxored-satellite@0.0.5
+└─ sxored-satellite@0.0.8
 info All dependencies
 ├─ @cspotcode/source-map-support@0.8.1
 ├─ @jridgewell/resolve-uri@3.1.2

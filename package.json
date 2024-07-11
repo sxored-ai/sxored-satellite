@@ -1,6 +1,6 @@
 {
   "name": "sxored-satellite",
-  "version": "v0.0.5",
+  "version": "v0.0.8",
   "private": false,
   "repository": "https://github.com/sxored-ai/sxored-satellite",
   "main": "src/index.ts",
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "ts-node postinstall.ts"
   },
   "keywords": [],
   "author": "Sxored Labs",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
-    "ts-jest": "^29.2.0"
+    "ts-jest": "^29.2.0",
+    "tslib": "^2.6.3"
   }
 }
