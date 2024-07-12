@@ -1,6 +1,18 @@
-<div align="center">
+```
+  ######  ##    ##   #######   ########   ########  ########
+##    ##   #    #   ##     ##  ##     ##  ##        ##     ##
+##          #  #    ##     ##  ##     ##  ##        ##     ##
+ ######      ##     ##     ##  ########   ######    ##     ##
+      ##    #  #    ##     ##  ##   ##    ##        ##     ##
+##    ##   #    #   ##     ##  ##    ##   ##        ##     ##
+ ######   ##    ##   #######   ##     ##  ########  ########
 
-# Sxored's Satellite JavaScript Version
+==============================================================
+ Sxored's Satellite - JavaScript Version
+==============================================================
+```
+
+<div align="center">
 
 ### Framework for building Loan Origination Assistants
 
@@ -21,6 +33,8 @@ Satellite is Sxored's official SDK that enables any client to integrate producti
 
 <br/>
 
+![image](sxored.png)
+
 ## Installation
 
 Add this dependency to your project's build file:
@@ -31,42 +45,6 @@ npm install sxored-satellite
 # or
 
 yarn add sxored-satellite
-```
-
-```bash
-wbs@xyz:~$ yarn add sxored-satellite@0.0.8
-yarn add v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-[4/4] Building fresh packages...
-
-success Saved lockfile.
-success Saved 21 new dependencies.
-info Direct dependencies
-└─ sxored-satellite@0.0.8
-info All dependencies
-├─ @cspotcode/source-map-support@0.8.1
-├─ @jridgewell/resolve-uri@3.1.2
-├─ @jridgewell/sourcemap-codec@1.5.0
-├─ @jridgewell/trace-mapping@0.3.9
-├─ @tsconfig/node16@1.0.4
-├─ @types/node@20.14.10
-├─ acorn-walk@8.3.3
-├─ acorn@8.12.1
-├─ arg@4.1.3
-├─ create-require@1.1.1
-├─ diff@4.0.2
-├─ make-error@1.3.6
-├─ sxored-satellite@0.0.5
-├─ ts-node@10.9.2
-├─ typescript@5.5.3
-├─ undici-types@5.26.5
-├─ v8-compile-cache-lib@3.0.1
-└─ yn@3.1.1
-Done in 8.02s.
-
 ```
 
 ## Example usage in React component
@@ -261,9 +239,9 @@ client.readPdfFraud(selected_file)
 
 ## Acknowledgements
 
-To be able to use this SDK, each client must be registered in the client database in SxoredOS. The IP address to access the endpoint must also be whitelisted first.
+To be able to use this SDK, each client must be registered in our SxoredOS database. The IP address to access the endpoint must also be whitelisted first.
 
-Contact our [Customer Success](mailto:use@sxored.com) if your business interested to implement our SxoredOS.
+Contact our [Customer Success](mailto:use@sxored.com) to get your business account ready for SxoredOS.
 
 ## Beta status
 
