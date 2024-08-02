@@ -133,7 +133,7 @@ client.readStatementAccount(selected_file)
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.analyzeBankStatement(selected_file)
+client.analyzeBankStatement(selected_file, related_names)
 ```
 
 ### 2. 4. OJK's SLIK
