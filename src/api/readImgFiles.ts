@@ -1,7 +1,7 @@
 import { ApiResponse, ApiError, ImageToTextResponse } from '../types';
 import { request } from './request';
 
-export async function readIdCard(baseURL: string, accessToken: string, file: File): Promise<ApiResponse<ImageToTextResponse>> {
+export async function readImgFiles(baseURL: string, accessToken: string, file: File): Promise<ApiResponse<ImageToTextResponse>> {
   const formData = new FormData();
   formData.append('file', file);
 

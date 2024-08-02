@@ -96,11 +96,12 @@ const FileUploader: React.FC = () => {
 export default FileUploader;
 
 ```
+<br/>
 
-## Functions
+# Features:
+<br/>
 
-### 1. Read ID Card photo (OCR replacement)
-
+## 1. Read ID Card photo (OCR replacement)
 #### Request
 
 ```typescript
@@ -108,132 +109,42 @@ const client = new SxoredSatellite('X_API_TOKEN');
 client.readIdCard(selected_file)
 ```
 
-#### Response 200
+## 2. Read PDF files
 
-```json
-{
-  "name": "ELON MUSK",
-  "nik": "3201072011780010",
-  "place": "YOGYAKARTA",
-  "dob": "20-11-1978",
-  "gender": "LAKI-LAKI",
-  "nationality": "WNA",
-  "religion": "ISLAM",
-  "address": "PERSADA RAYA JALAN AMERIKA",
-  "rt_rw": "007/007",
-  "village": "GEMBOR",
-  "district": "PERIUK",
-  "city": "KOTA TANGERANG",
-  "province": "PROVINSI BANTEN",
-  "marriage_status": "KAWIN",
-  "occupation": "MENGURUS RUMAH TANGGA"
-}
+### 2. 1. Bank Statement
+#### Request
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readBankStatement(selected_file)
 ```
 
-### 2. Read PDF files
+### 2. 2. Bank Statement Account Information
+#### Request
+
+```typescript
+const client = new SxoredSatellite('X_API_TOKEN');
+client.readStatementAccount(selected_file)
+```
+
+### 2. 3. Bank Statement Fraud Analyzer
 
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readPdf(selected_file)
+client.analyzeBankStatement(selected_file)
 ```
 
-#### Response 200
-
-```json
-[
-  {
-    "date": "29-Aug-2023",
-    "transaction": "TARIK TUNAI",
-    "description": "Tanpa Kategori",
-    "category": "Cash Withdrawal",
-    "debit": 100000,
-    "credit": 0,
-    "balance": 0
-  },
-  {
-    "date": "29-Aug-2023",
-    "transaction": "TRF/PAY/TOP-UP\nECHANNEL",
-    "description": "Tanpa Kategori",
-    "category": "Transfer/Top Up",
-    "debit": 0,
-    "credit": 100000,
-    "balance": 100000
-  },
-  {
-    "date": "27-Aug-2023",
-    "transaction": "TARIK TUNAI",
-    "description": "Tanpa Kategori",
-    "category": "Cash Withdrawal",
-    "debit": 200000,
-    "credit": 0,
-    "balance": 0
-  },
-  ...
-]
-```
-
-### 3. Read PDF Metadata
+### 2. 4. OJK's SLIK
 
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readMetadata(selected_file)
+client.readSlikOjk(selected_file)
 ```
 
-#### Response 200
-
-```json
-{
-  "/Title": "CONSOLIDATE: 0098034777 | WAWAN SETYAWAN",
-  "/Creator": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-  "/Producer": "Skia/PDF m126",
-  "/CreationDate": "D:20240701033019+00'00'",
-  "/ModDate": "D:20240701033019+00'00'"
-}
-```
-
-### 4. Check for potential fraud
-
-#### Request
-
-```typescript
-const client = new SxoredSatellite('X_API_TOKEN');
-client.readPdfFraud(selected_file)
-```
-
-#### Response 200
-
-```json
-{
-  "fraud": true,
-  "suspicious_transactions": [
-    {
-      "page_number": 2,
-      "transaction_details": "14/08 BI-FAST CR BIF TRANSFER DR 2,600,000.00 9,258,073.87\n501\nV***nny Ku****an",
-      "suspicious_reason": "Large credit transfer, potentially exceeding typical income levels. The name 'V***nny Ku****an' is repeated throughout the statement, indicating a potential pattern of suspicious transactions."
-    },
-    {
-      "page_number": 2,
-      "transaction_details": "15/08 TRSF E-BANKING CR 1508/FTSCY/WS95031 5,000,000.00 9,236,073.87\n        5000000.00\nA***R L****N",
-      "suspicious_reason": "Large credit transfer, potentially exceeding typical income levels.  The beneficiary name 'A***R L****N' is repeated throughout the statement, indicating a potential pattern of suspicious transactions."
-    },
-    {
-      "page_number": 2,
-      "transaction_details": "16/08 TRSF E-BANKING CR 1608/FTSCY/WS95031 500,000.00\n         500000.00\nV***nny Ku****an",
-      "suspicious_reason": "Large credit transfer, potentially exceeding typical income levels.  The beneficiary name 'V***nny Ku****an' is repeated throughout the statement, indicating a potential pattern of suspicious transactions."
-    },
-    {
-      "page_number": 4,
-      "transaction_details": "28/08 BI-FAST CR BIF TRANSFER DR 2,779,000.00 11,144,593.87\n501\nV***nny Ku****an",
-      "suspicious_reason": "Large credit transfer, potentially exceeding typical income levels. The name 'V***nny Ku****an' is repeated throughout the statement, indicating a potential pattern of suspicious transactions."
-    },
-    ...
-  ]
-}
-```
 
 <br/>
 
@@ -241,7 +152,7 @@ client.readPdfFraud(selected_file)
 
 To be able to use this SDK, each client must be registered in our SxoredOS database. The IP address to access the endpoint must also be whitelisted first.
 
-Contact our [Customer Success](mailto:use@sxored.com) to get your business account ready for SxoredOS.
+Contact our [Customer Success](mailto:tech@sxored.com) to get your business account ready for SxoredOS.
 
 ## Beta status
 

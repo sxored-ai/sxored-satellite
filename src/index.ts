@@ -1,7 +1,5 @@
-import { readIdCard } from './api/readIdCard';
-import { readPdf } from './api/readPdf';
-import { readPdfFraud } from './api/readPdfFraud';
-import { readMetadata } from './api/readMetadata';
+import { readImgFiles } from './api/readImgFiles';
+import { readPdfFiles } from './api/readPdfFiles';
 import { ApiResponse, ImageToTextResponse, FileToTextResponse, PdfSummaryResponse } from './types';
 import { environment } from './environment';
 
@@ -15,19 +13,23 @@ class SxoredSatellite {
   }
 
   async readIdCard(file: File): Promise<ApiResponse<ImageToTextResponse>> {
-    return readIdCard(this.baseURL, this.accessToken, file);
+    return readImgFiles(this.baseURL, this.accessToken, file);
   }
 
-  async readPdf(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdf(this.baseURL, this.accessToken, file);
+  async readBankStatement(file: File): Promise<ApiResponse<FileToTextResponse>> {
+    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statements', file, '');
   }
 
-  async readPdfFraud(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdfFraud(this.baseURL, this.accessToken, file);
+  async readStatementAccount(file: File): Promise<ApiResponse<FileToTextResponse>> {
+    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statement-account', file, '');
   }
 
-  async readMetadata(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readMetadata(this.baseURL, this.accessToken, file);
+  async analyzeBankStatement(file: File, data: string): Promise<ApiResponse<FileToTextResponse>> {
+    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statement-analyzer', file, data);
+  }
+
+  async readSlikOjk(file: File): Promise<ApiResponse<FileToTextResponse>> {
+    return readPdfFiles(this.baseURL, this.accessToken, '/read-slik-ojk', file, '');
   }
 }
 
