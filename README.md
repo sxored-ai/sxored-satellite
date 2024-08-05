@@ -101,50 +101,47 @@ export default FileUploader;
 # Features:
 <br/>
 
-## 1. Read ID Card photo (OCR replacement)
+## 1. Read Image File
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readIdCard(selected_file)
+client.readIdCard(selected_image)
 ```
 
-## 2. Read PDF files
-
-### 2. 1. Bank Statement
+## 2. Read PDF File
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readBankStatement(selected_file)
+client.readPdfFiles(selected_file)
 ```
 
-### 2. 2. Bank Statement Account Information
+## 3. Extract PDF Data
+
+### 3. 1. Bank Statement
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readStatementAccount(selected_file)
+client.extractBankStatement(pdf_content)
 ```
 
-### 2. 3. Bank Statement Fraud Analyzer
-
+### 3. 2. Bank Account Information
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.analyzeBankStatement(selected_file, related_names)
+client.extractBankAccount(pdf_content)
 ```
 
-### 2. 4. OJK's SLIK
-
+### 3. 3. OJK SLIK
 #### Request
 
 ```typescript
 const client = new SxoredSatellite('X_API_TOKEN');
-client.readSlikOjk(selected_file)
+client.extractOjkSlik(pdf_content)
 ```
-
 
 <br/>
 
