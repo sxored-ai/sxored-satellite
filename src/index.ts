@@ -1,5 +1,6 @@
 import { readImgFiles } from './api/readImgFiles';
 import { readPdfFiles } from './api/readPdfFiles';
+import { extractPdfFiles } from './api/extractPdfFiles';
 import { ApiResponse, ImageToTextResponse, FileToTextResponse, PdfSummaryResponse } from './types';
 import { environment } from './environment';
 
@@ -16,20 +17,20 @@ class SxoredSatellite {
     return readImgFiles(this.baseURL, this.accessToken, file);
   }
 
-  async readBankStatement(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statements', file, '');
+  async readPdfFiles(file: File): Promise<ApiResponse<FileToTextResponse>> {
+    return readPdfFiles(this.baseURL, this.accessToken, file);
   }
 
-  async readStatementAccount(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statement-account', file, '');
+  async extractBankStatement(content: string): Promise<ApiResponse<FileToTextResponse>> {
+    return extractPdfFiles(this.baseURL, this.accessToken, '/extract-bank-statement', content);
   }
 
-  async analyzeBankStatement(file: File, data: string): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdfFiles(this.baseURL, this.accessToken, '/bank-statement-analyzer', file, data);
+  async extractBankAccount(content: string): Promise<ApiResponse<FileToTextResponse>> {
+    return extractPdfFiles(this.baseURL, this.accessToken, '/extract-bank-account', content);
   }
 
-  async readSlikOjk(file: File): Promise<ApiResponse<FileToTextResponse>> {
-    return readPdfFiles(this.baseURL, this.accessToken, '/read-slik-ojk', file, '');
+  async extractOjkSlik(content: string): Promise<ApiResponse<FileToTextResponse>> {
+    return extractPdfFiles(this.baseURL, this.accessToken, '/extract-ojk-slik', content);
   }
 }
 

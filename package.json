@@ -1,6 +1,6 @@
 {
   "name": "sxored-satellite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "repository": "https://github.com/sxored-ai/sxored-satellite",
   "main": "src/index.ts",

@@ -45,7 +45,7 @@ describe('SxoredSatellite', () => {
     });
 
     const file = new File(['dummy content'], 'document.pdf', { type: 'application/pdf' });
-    const response = await apiSdk.readBankStatement(file);
+    const response = await apiSdk.readPdfFiles(file);
     expect(response.data.text).toBe('PDF Text');
     expect(response.status).toBe(200);
   });
