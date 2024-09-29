@@ -1,30 +1,36 @@
 {
-  "name": "sxored-satellite",
-  "version": "0.1.1",
-  "private": false,
-  "repository": "https://github.com/sxored-ai/sxored-satellite",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
-  "types": "./index.d.ts",
+  "name": "sxored-js",
+  "version": "0.1.0",
+  "description": "Satellite is Sxored's official SDK that enables any client to integrate production ready loan origination model into any applications in a matter of minutes.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "type": "module",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "test": "jest",
-    "prepublishOnly": "npm run build",
-    "postinstall": "ts-node postinstall.ts"
+    "prepare": "npm run build"
   },
-  "keywords": [],
-  "author": "Sxored Labs",
+  "keywords": [
+    "Sxored",
+    "LOS",
+    "model",
+    "npm"
+  ],
+  "author": "Sxoredigans",
   "license": "MIT",
-  "description": "SDK to access Sxored Operating Service.",
   "dependencies": {
-    "@types/node": "^20.14.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.0",
-    "tslib": "^2.6.3"
-  }
+    "typescript": "^4.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sxored-ai/sxored-satellite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sxored-ai/sxored-satellite/issues"
+  },
+  "homepage": "https://github.com/sxored-ai/sxored-satellite#readme"
 }
