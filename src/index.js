@@ -15,6 +15,9 @@ import findOrmas from './modules/collateral_info/findOrmas';
 import housePrice from './modules/collateral_info/housePrice';
 import housePriceExtend from './modules/collateral_info/housePriceExtend';
 
+// Utilities
+import checkHoliday from './modules/utilities/checkHoliday';
+
 class Satellite {
   constructor(config) {
     this.apiBaseUrl = 'https://api.sxored.com'
@@ -37,6 +40,9 @@ class Satellite {
   findOrmas = (data) => findOrmas(this.apiBaseUrl, this.apiKey, data);
   housePrice = (data) => housePrice(this.apiBaseUrl, this.apiKey, data);
   housePriceExtend = (data) => housePriceExtend(this.apiBaseUrl, this.apiKey, data);
+
+  // Utilities
+  checkHoliday = (data) => checkHoliday(this.apiBaseUrl, this.apiKey, data);
 }
 
 export default Satellite;

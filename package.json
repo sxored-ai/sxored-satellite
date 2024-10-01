@@ -1,6 +1,6 @@
 {
   "name": "sxored-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Satellite is Sxored's official SDK that enables any client to integrate production ready loan origination model into any applications in a matter of minutes.",
   "main": "src/index.js",
   "types": "src/index.d.ts",

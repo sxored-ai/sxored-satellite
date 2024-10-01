@@ -29,5 +29,8 @@ declare module 'sxored.js' {
     findOrmas(data: Record<string, any>): Promise<SatelliteResult>;
     housePrice(data: Record<string, any>): Promise<SatelliteResult>;
     housePriceExtend(data: Record<string, any>): Promise<SatelliteResult>;
+
+    // Utilities
+    checkHoliday(data: Record<string, any>): Promise<SatelliteResult>;
   }
 }

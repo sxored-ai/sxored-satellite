@@ -196,6 +196,26 @@ try {
 }
 ```
 
+<br/>
+
+## 2. 4. Module: Utility
+
+### Check for Holiday
+
+```javascript
+const data = {
+  date: "2024-10-10",
+  timezone: "Asia/Jakarta"
+}
+
+try {
+  const result = await client.checkHoliday(data);
+  console.log('Data:', result.data);
+} catch (error) {
+  console.error('Data fetch failed:', error);
+}
+```
+
 ## 3. API Reference
 
 ### `new Satellite(config)`
